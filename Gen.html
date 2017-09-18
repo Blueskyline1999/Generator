@@ -17,7 +17,7 @@
           arr.push(inp);
         }
         var gener = document.querySelector("#gen");
-        var paragr = document.querySelector("#p");
+        var par = document.querySelector("#p");
         gen.onclick = function() {
           var i = Math.floor(Math.random()*arr.length);
           var j = Math.floor(Math.random()*arr.length);
@@ -29,7 +29,7 @@
           var cuv1 = arr[i];
           var cuv2 = arr[j];
           console.log(cuv1 , cuv2);
-          paragr.innerHtml = cuv1 + " " + cuv2;
+          par.innerHTML = cuv1 + " " + cuv2;
         }
     </script>
   </body>
