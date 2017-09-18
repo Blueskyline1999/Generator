@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="get" value="">
+    <input type="button" id="send" value="input">
+    <input type="button" id="gen" value="Generate">
+    <p id="p"></p>
+    <script type="text/javascript">
+        var button  = document.querySelector("#send");
+        var arr = [];
+        button.onclick = function() {
+          var inp = document.querySelector("#get").value;
+          arr.push(inp);
+        }
+        var gener = document.querySelector("#gen");
+        var paragr = document.querySelector("#p");
+        gen.onclick = function() {
+          var i = Math.floor(Math.random()*arr.length);
+          var j = Math.floor(Math.random()*arr.length);
+          console.log(i,j);
+          if (j == i) {
+            j = Math.floor(Math.random()*arr.length);
+          }
+          console.log(i,j);
+          var cuv1 = arr[i];
+          var cuv2 = arr[j];
+          console.log(cuv1 , cuv2);
+          paragr.innerHtml = cuv1 + " " + cuv2;
+        }
+    </script>
+  </body>
+</html>
